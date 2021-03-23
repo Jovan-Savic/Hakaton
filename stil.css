@@ -81,6 +81,9 @@ top: 0;
     position: relative;
     margin: auto;
     background-color: #f0a500;
+    border:#f0a500;
+    border-width: 5px;
+    border-style: double;
   }
   .slikaslajda {
     display: none;
