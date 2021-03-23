@@ -1,0 +1,91 @@
+<html>
+	<head>
+    <link rel="stylesheet" href="stil.css">
+		<title>
+		Home
+		</title>
+	</head>
+	
+	<body style= "margin:0px;">
+<header class="top">
+  <a href="home.html" class="activan">Home</a>
+  <a href="events.html">Events</a>
+  <a href="galerija.html">Galerija</a>
+  <a href="onama.html">O nama</a>
+  <a href="login.html " style="float: right;">Log in</a>
+  <a href="signup.html" style="float: right;">Sign up</a>
+  <a href="registrujevent.html" style="float: right;">Registruj event</a>
+</header>
+
+
+  
+  <div class="slajd" >
+  <div class="slikaslajda">
+    <img src="placeholder.png" style="width:100%">
+    <div class="textsl">Caption One</div>
+  </div>
+
+  <div class="slikaslajda">
+    <img src="placeholder.png" style="width:100%">
+    <div class="textsl">Caption Two</div>
+  </div>
+
+  <div class="slikaslajda">
+    <img src="placeholder.png" style="width:100%">
+    <div class="textsl">Caption Three</div>
+  </div>
+ </div>
+  <br>
+  <div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  </div>
+  
+
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+placeholder tekst<br>
+
+
+
+
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slikaslajda");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); 
+  }
+  </script>
+	</body>
+</html>
