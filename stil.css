@@ -1,3 +1,17 @@
+
+* {
+    
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, sans-serif;
+}
+img {
+    vertical-align: middle;
+}
+
+
+
 .button{
 border-radius: 10px;
 background-color: cornflowerblue;
@@ -23,32 +37,64 @@ top: 0;
     cursor: not-allowed;
   }
 
-/* Add a black background color to the top navigation */
-.topnav {
+
+  .textsl {
+    color: #f4f4f4;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /*                                                                =============================================                                    */
+.top {
     background-color: #000000;
     overflow: hidden;
   }
   
-  /* Style the links inside the navigation bar */
-  .topnav a {
+  .top a {
     float: left;
     color: #f4f4f4;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    transition: background-color 0.3s ease;
   }
   
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+  .top a:hover {
+    background-color: #cf7500;
+    color: white;
+    transition: background-color 0.3s ease;
   }
   
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #4CAF50;
+  .top a.activan {
+    background-color: #cf7500;
     color: white;
   }
 
-  
+  /*                                                    =============================================================                        */
+  .slajd {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    background-color: #f0a500;
+  }
+  .slikaslajda {
+    display: none;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #f0a500;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active {
+    background-color: #cf7500;
+  }
