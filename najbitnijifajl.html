@@ -10,44 +10,35 @@ img {
 </style>
 	</head>
 	
-	<body>
-<div class="topnav">
-  <a href="home.html">Home</a>
-  <a href="events.html">Events</a>
-  <a href="galerija.hmtl">Galerija</a>
-  <a href="onama.html">O nama</a>
-  <a href="login.html">Log in</a>
-  <a href="signup.html">Sign up</a>
-  <a href="registrujevent.html">Registruj event</a>
- </div>
- <br>
- <img src="placeholder.png" width="100%">
- <br>
- <br>
- O nama
- <br>
- 
- <img src="placeholder.png" width="20%" height="50%">
-
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-placeholder tekst<br>
-
-
-	</body>
+    <div id="id01" class="modal">
+  <!--   <span onclick="document.getElementById('id01').style.display='none'"
+      class="close" title="Close Modal">&times;</span>
+  -->
+        <!-- Modal Content -->
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+          </div>
+          <br>
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <br>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+    
+                <br>
+              <input type="checkbox" checked="checked" name="remember"> organizator
+            </label>
+          </div>
+          <br>
+          <button type="submit">Login</button>
+          <label>
+          <br>
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
+      </div>
 </html>
