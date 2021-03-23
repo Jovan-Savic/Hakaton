@@ -12,32 +12,6 @@ img {
 
 
 
-.button{
-border-radius: 10px;
-background-color: cornflowerblue;
-color: rgb(255, 255, 255);
-border: none;
-padding: 15px 32px;
-text-align: center;
-font-size: 16px;
-transition-duration: 0.4s;
-float:right;
-align-self: center;
-position: sticky; 
-top: 0;
-}
-.button:hover{
-    background-color: rgb(59, 121, 236);
-    color: rgb(255, 255, 255);
-
-
-}
-.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-
-
   .textsl {
     color: #f4f4f4;
     font-size: 15px;
@@ -101,3 +75,64 @@ top: 0;
   .active {
     background-color: #cf7500;
   }
+
+
+
+  /* SIGN UP SIGN UP                           ============================================================                            */
+
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f4f4f4;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #f4f4f4;
+    outline: none;
+  }
+  
+  hr {
+    border: 1px solid #f1f4f4;
+    margin-bottom: 25px;
+  }
+  
+  button {
+    background-color: #f0a500;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  
+
+  .signupbtn {
+    float: center;
+    width: 50%;
+  }
+  
+  .signup {
+    padding: 16px;
+  }
+  
+ 
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+
+
