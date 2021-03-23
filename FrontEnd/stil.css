@@ -75,6 +75,7 @@ img {
   .active {
     background-color: #cf7500;
   }
+<<<<<<< HEAD
 
 
 
@@ -136,3 +137,11 @@ img {
 
 
 
+  .footer {
+  
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  }
