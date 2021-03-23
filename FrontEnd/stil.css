@@ -101,3 +101,11 @@ top: 0;
   .active {
     background-color: #cf7500;
   }
+  .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  }
