@@ -5,6 +5,18 @@ ConnectDatabase();
 GetData();
 
 
+const express = require("express");
+const app = express();
+
+const PORT = 3000;
+
+app.listen(PORT, () =>{
+console.log("AAAAA");
+
+}
+
+);
+
 async function GetData()
 {
     let eventovi=await axios.get("/api/eventovi"); //ovde ide ime petrove magicne datoteke za eventove (napravio sam da imne ime organizatora kontakt datum lokaciju i info)
