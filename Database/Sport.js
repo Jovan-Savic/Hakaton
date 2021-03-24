@@ -63,7 +63,7 @@ const EventSchema = new mongoose.Schema(
         },
         ucesnici: 
         {
-            type: KorisnikSchema
+            type: [KorisnikSchema]
         },
         slike:
         {
