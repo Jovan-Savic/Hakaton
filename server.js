@@ -11,11 +11,22 @@ const app = express();
 const PORT = 3000;
 
 app.listen(PORT, () =>{
-console.log("AAAAA");
+console.log("AAAA");
 
-}
+});
 
-);
+app.use(express.json());
+
+const a = 1;
+
+app.get("/", (req, res) => 
+{
+    res.json({
+        a: a,
+    })
+})
+
+
 /*
 async function GetData()
 {
