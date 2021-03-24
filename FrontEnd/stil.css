@@ -54,8 +54,8 @@ img {
     max-width: 10000px;
     position: relative;
     margin: auto;
-    background-color: #f0a500;
-    border:#f0a500;
+    background-color: #cf7500;
+    border:#cf7500;
     border-width: 5px;
     border-style: double;
   }
@@ -150,10 +150,7 @@ img {
     background-color:#f0a500;
     color:black;
     margin: 10px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 10%;
-    box-shadow: 5px #cf7500;
+    box-shadow: 5px 5px 5px #cf7500;
     
   }
 
