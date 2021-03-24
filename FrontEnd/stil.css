@@ -12,13 +12,31 @@ body {
 
   .textsl {
     color: #f4f4f4;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
     text-align: center;
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
   }
+
+  .homee{
+
+    width: 40%;
+    background-color:#f0a500;
+    color:black;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #cf7500;
+    padding: 5px;
+  }
+
+
+
+
+
+
 
   /*                                                                =============================================                                    */
 .top {
