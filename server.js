@@ -1,5 +1,7 @@
 const ConnectDatabase = require("./Database/Database");
 
+ConnectDatabase();
+
 GetData();
 
 
