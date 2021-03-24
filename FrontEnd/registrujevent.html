@@ -17,6 +17,46 @@
   <a href="signup.html" style="float: right;">Sign up</a>
   <a href="registrujevent.html" class="activan" style="float: right;">Registruj event</a>
 </header>
+
+<html>
+	<head>
+    <link rel="stylesheet" href="stil.css">
+    <link rel="shortcut icon" type="image/jpg" href="favikon.png"/>
+		<title>
+		Registruj event
+		</title>
+	</head>
+	
+	<body style= "margin:0px;">
+
+<div class="signup">
+  <h1>Obrazac za prijavljivanje eventa</h1>
+  <hr>
+
+  <label for="imeeventa"><b>Unesite ime eventa</b></label>
+  <input type="text" placeholder="Ime eventa" name="imeeventa" required>
+
+  <label for="lokacija"><b>Unesite lokaciju</b></label>
+  <input type="text" placeholder="Lokacija" name="lokacija" required>
+
+  <label for="datum"><b>Odredite datum</b></label>
+  <input type="date" placeholder="Datum" name="datum" required>
+  <hr>
+  <label for="info"><b>Dodatne informacije</b></label>
+  <input type="text" placeholder="Unesite informacije" name="informacije" required>
+
+  <form action="/action_page.php">
+  <label for="img"><b>Izaberite sliku:</b></label>
+  <input type="file" id="img" name="img" accept="image/*">
+  </form>
+
+
+  <button type="submit" class="signupbtn">Registruj event</button>
+</div>
+
+
+
+
 <footer class="footer" style="position: fixed;">
   <img src="twitter.png" height="30px" width="30px" style="margin: 10px;">
   <img src="facebook.jpg" height="30px" width="30px" style="margin: 10px;">
