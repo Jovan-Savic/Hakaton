@@ -24,7 +24,7 @@ app.get("/", (req, res) =>
         a: a,
     })
 })
-
+//work
 app.get("/api/timovi", async (req, res) => 
 {
     try{
@@ -42,8 +42,11 @@ app.get("/api/timovi", async (req, res) =>
 
     }
 })
-
-/*
+/*async function ohno()
+{
+    console.log("ohno");
+}*/
+/*a
 async function GetData()
 {
     let eventovi=await axios.get("/api/eventovi"); //ovde ide ime petrove magicne datoteke za eventove (napravio sam da imne ime organizatora kontakt datum lokaciju i info)
