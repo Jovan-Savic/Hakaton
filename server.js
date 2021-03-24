@@ -1,4 +1,7 @@
+const ConnectDatabase = require("./Database/Database");
+
 GetData();
+
 
 async function GetData()
 {

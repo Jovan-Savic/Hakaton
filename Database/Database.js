@@ -23,3 +23,6 @@ async function ConnectDatabase()
     }
 
 }
+
+// Slanje databaze
+module.exports = ConnectDatabase;
