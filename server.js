@@ -1,8 +1,8 @@
-const ConnectDatabase = require("./Database/Database");
+//const ConnectDatabase = require("./Database/Database");
 
-ConnectDatabase();
+//ConnectDatabase();
 
-GetData();
+//GetData();
 
 
 const express = require("express");
@@ -16,7 +16,7 @@ console.log("AAAAA");
 }
 
 );
-
+/*
 async function GetData()
 {
     let eventovi=await axios.get("/api/eventovi"); //ovde ide ime petrove magicne datoteke za eventove (napravio sam da imne ime organizatora kontakt datum lokaciju i info)
@@ -51,3 +51,4 @@ function Napravi(eventovi)
      return event;
  }
 
+*/
