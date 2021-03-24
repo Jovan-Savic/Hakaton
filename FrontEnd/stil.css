@@ -118,7 +118,7 @@ img {
 
   .signupbtn {
     float: center;
-    width: 50%;
+    width: 20%;
   }
   
   .signup {
@@ -143,7 +143,17 @@ img {
   background-color: black;
   color: white;
   }
-  p {
-  display: block;
-  background:#f0a500
+
+  .onama{
+    float: right;
+    width: 40%;
+    background-color:#f0a500;
+    color:black;
+    margin: 10px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10%;
+    box-shadow: 5px #cf7500;
+    
   }
+
