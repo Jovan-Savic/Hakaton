@@ -28,6 +28,10 @@ let sifra=document.querySelector(".passl");
 sifra=sifra.value;
 let ner=document.querySelector(".pasg")
 console.log(emil);
+
+let korisnici = axios.get("/api/korisnici"); // svi korisnici
+console.log(korisnici); // ispis svih korisnika u consoli
+
 if(emil.length>7)//proveras da li emil postoji
 {
     gre.innerHTML="";
