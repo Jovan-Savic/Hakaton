@@ -34,6 +34,8 @@ if(pass.length>8)
 if(passre==pass)
 {
     passreg.innerHTML="";
+
+    
 //ubacuje se u bazu
 }
 else

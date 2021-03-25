@@ -18,13 +18,64 @@ app.use(express.json());
 
 app.use(express.static("FrontEnd"));
 
-app.get("/api/timovi", async (req, res) => 
+app.get("/api/eventi", async (req, res) => 
 {
     try{
         const CelaBaza = await Sport.find();
         res.json({
             uspesno: true,
             poruka: CelaBaza,
+        });
+
+    }catch(err){
+        res.json({
+            uspesno: false,
+            poruka: err.message 
+        });
+
+    }
+})
+app.post("/api/eventi", async (req, res) => 
+{
+    try{
+        const ime =  req.body.ime;
+         
+
+        const noviEvent = new Sport({
+            ime: ime,
+        });
+
+        const provera = await noviEvent.save();
+        res.json({
+            uspesno: true,
+            baza: provera,
+        });
+
+    }catch(err){
+        res.json({
+            uspesno: false,
+            poruka: err.message 
+        });
+
+    }
+})
+app.post("/api/korisnik", async (req, res) => 
+{
+    try{
+        const IdEventa =  req.body.IdEventa;
+         
+        const Event = await Sport.findById(IdEventa);
+
+        const noviKorisnik = {
+            ime: req.body.ime,
+        }
+
+        Event.ucesnici.push(noviKorisnik);
+
+        const provera = await Event.save();
+        res.json({
+            uspesno: true,
+            baza: provera,
         });
 
     }catch(err){
