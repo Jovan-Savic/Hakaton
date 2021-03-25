@@ -35,17 +35,17 @@
   <hr>
 
   <label for="imeeventa"><b>Unesite ime eventa</b></label>
-  <input type="text" placeholder="Ime eventa" name="imeeventa" required>
-
+  <input type="text" class="imev"placeholder="Ime eventa" name="imeeventa" required>
+<div class="imegr"></div>
   <label for="lokacija"><b>Unesite lokaciju</b></label>
-  <input type="text" placeholder="Lokacija" name="lokacija" required>
-
+  <input type="text" class="lokev" placeholder="Lokacija" name="lokacija" required>
+  <div class="lokgr"></div>
   <label for="datum"><b>Odredite datum</b></label>
-  <input type="date" placeholder="Datum" name="datum" required>
+  <input type="date" class="datev"placeholder="Datum" name="datum" required>
+  <div class="dategr"></div>
   <hr>
   <label for="info"><b>Dodatne informacije</b></label>
-  <input type="text" placeholder="Unesite informacije" name="informacije" required>
-
+  <input type="text" class="dodev" placeholder="Unesite informacije" name="informacije" required>
   <form action="/action_page.php">
   <label for="img"><b>Izaberite sliku:</b></label>
   <input type="file" id="img" name="img" accept="image/*">
@@ -53,11 +53,12 @@
   <br>
   <p>Kreiranjem eventa pristajete na nase <a href="terms.txt" style="color:#cf7500">Ugovore koriscenja</a>.<br>
 
-  <button type="submit" class="signupbtn">Registruj event</button>
+  <button type="submit" class="regeve">Registruj event</button>
 </div>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="regevent.js"></script>
 
 <footer class="footer" >
   <img src="twitter.png" height="30px" width="30px" style="margin: 10px;">

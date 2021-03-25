@@ -20,7 +20,7 @@ const EventSchema = new mongoose.Schema(
         },
         organizator:
         {
-            type: KorisnikSchema,
+            type: String,
            // required: true
         },
         kontakt: 
@@ -45,7 +45,7 @@ const EventSchema = new mongoose.Schema(
         },
         ucesnici: 
         {
-            type: [KorisnikSchema]
+            type: [String],
         },
         slika:
         {
