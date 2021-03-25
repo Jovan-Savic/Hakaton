@@ -15,17 +15,19 @@ async function Registruj()
     
     console.log("aaaaaaaaa");
     let datu = document.querySelector(".datev")//petrov cao dokument
-
+    datu =datu.value;
     let datugr = document.querySelector(".dategr");
+    console.log(datu);
 if(imeev.length>2)
 {
     imegr.innerHTML="";
     console.log(lokev.length);
 if(lokev.length>4)
-{
-if(datu.nodeValue!=null)
-{
-
+{lokgr.innerHTML="";
+if(datu!=null && datu!='')
+{ console.log("bbbbb");
+    datugr.innerHTML="";
+    //mozes da uzmes
 }
 else
 {
