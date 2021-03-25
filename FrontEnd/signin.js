@@ -20,8 +20,9 @@ let passg=document.querySelector(".passg");
 let passre=document.querySelector(".passr");
 passre=passre.value;
 let passreg=document.querySelector(".passrg");
-let orga=document.querySelector(".ckeck");
-orga=orga.value;
+console.log("AAA");
+let orgaa=document.querySelector(".check");
+let orga =orgaa.checked;
 console.log(orga);
 if(imee.length>2)
 {
@@ -45,7 +46,7 @@ if(passre==pass)
         prezime: pree,
         mail: emel,
         password: pass,
-        organizator: orga, 
+        organizator: orga
     })
     .then(function (response) {
       console.log(response);
