@@ -39,11 +39,11 @@ if(passre==pass)
 
     axios.post('/api/korisnici', 
     {
-        ime: /*placeholder*/,
-        prezime: /*placeholder*/,
-        mail: /*placeholder*/,
-        password: /*placeholder*/,
-        organizator /*BOOL placeholder*/,
+        ime: imee,
+        prezime: pree,
+        mail: emel,
+        password: pass,
+        organizator: orga, 
     })
     .then(function (response) {
       console.log(response);
