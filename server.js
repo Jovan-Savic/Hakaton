@@ -39,7 +39,7 @@ app.get("/api/eventi", async (req, res) =>
 app.get("/api/korisnici", async (req, res) => 
 {
     try{
-        const CelaBaza = await Sport.find();
+        const CelaBaza = await Korisnici.find();
         res.json({
             uspesno: true,
             poruka: CelaBaza,
@@ -56,14 +56,42 @@ app.get("/api/korisnici", async (req, res) =>
 app.post("/api/eventi", async (req, res) => 
 {
     try{
-        const ime =  req.body.ime;
-         
-
         const noviEvent = new Sport({
-            ime: ime,
+            ime:         req.body.ime,
+            organizator: req.body.organizator,
+            kontakt:     req.body.kontakt,
+            datum:       req.body.datum,
+            lokacija:    req.body.lokacija,
+            info:        req.body.info,
+            slika:       req.body.slika,
         });
 
         const provera = await noviEvent.save();
+        res.json({
+            uspesno: true,
+            baza: provera,
+        });
+
+    }catch(err){
+        res.json({
+            uspesno: false,
+            poruka: err.message 
+        });
+
+    }
+})
+app.post("/api/korisnici", async (req, res) => 
+{
+    try{
+        const noviKorisnik = new Korisnici({
+            ime:         req.body.ime,
+            prezime:     req.body.prezime,
+            mail:        req.body.mail,
+            password:    req.body.password,
+            organizator: req.body.organizator,
+        });
+
+        const provera = await noviKorisnik.save();
         res.json({
             uspesno: true,
             baza: provera,
