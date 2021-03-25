@@ -2,16 +2,16 @@ getda();
 async function getda()
 {let eventi = await axios.get("/api/eventi"); // svi eventi
     console.log(eventi); // ispis svih eventova u consoli
-napravi(eventi.data.eventi);
+napravi(eventi.data);
 }
 function napravi(eventi)
 {
     const eventnap= document.querySelector(".event");
     let events="";
-    eventi.forEach((eventa) =>
+    for(var eventa in eventi)
     {
         eventi +=eventi+napravii(eventa);
-    });
+    }
 //eventi.forEach()
 }
 function napravii(eventa)
