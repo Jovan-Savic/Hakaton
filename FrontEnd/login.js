@@ -41,15 +41,14 @@ if(emil.length>7)//proveras da li emil postoji
 if(sifra.length>7)//proverava da li pasvord odgovara
 {
     ner.innerHTML="";
-    console.log(korisnik.length);
-    korsnici.array.forEach((bol) => {
-        if(bol.mail==imil)
+    korisnici.array.forEach((bol) => {
+        if(bol.mail==emil)
         if(bol.password==sifra)k=1;
     });
     if(k==1){//logij se
-        
+        window.location.replace("Home2.html");
     }
-    else neema="neama tog korisnika";
+    else neema="nema tog korisnika";
 }
 else
 {
