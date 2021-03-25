@@ -164,7 +164,7 @@ body {
     float: right;
     width: 40%;
     background-color:#f0a500;
-    color:black;
+    color:white;
     margin: 10px;
     box-shadow: 5px 5px 5px #cf7500;
     
@@ -199,9 +199,34 @@ div.desc {
   text-align: center;
   color: #f4f4f4;
 }
+/* ================================================ EVENT ===========================================================================================*/
+
+.event{
+  float: right;
+  width: 94%;
+  background-color:#f0a500;
+  color:black;
+  margin: 3%;
+  box-shadow: 5px 5px 5px #cf7500;
+  padding: 0.5%;
+}
+.event button{
+  float: right;
+  background-color: #cf7500;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    opacity: 0.9;
+    transition: background-color 0.3s ease;
+
+}
 
 
-
-
-
+button:hover {
+  opacity:1;
+  transition: background-color 0.3s ease;s
+}
 
