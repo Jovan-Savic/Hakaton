@@ -28,7 +28,7 @@ const KorisnikSchema = new mongoose.Schema(
         },
         organizator: 
         {
-            type: bool
+            type: Boolean
         },
 
     });

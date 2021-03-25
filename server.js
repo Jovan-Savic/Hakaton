@@ -1,15 +1,24 @@
+<<<<<<< HEAD
 
 
 
+=======
+//GetData();
+>>>>>>> f60657301bb386b4a728b484fc520cb82e302f68
 const express = require("express");
 const app = express();
+const ConnectDatabase = require("./Database/Database");
+const Sport = require("./Database/Sport");
 
 const PORT = 3000;
 
+
 app.listen(PORT, () =>{
-console.log("AAAA");
+console.log("pocelo");
 
 });
+
+ConnectDatabase();
 
 app.use(express.json());
 
@@ -21,6 +30,7 @@ app.get("/", (req, res) =>
         a: a,
     })
 })
+<<<<<<< HEAD
 //const ConnectDatabase = require("./Database/Database");
 
 //ConnectDatabase();
@@ -28,6 +38,31 @@ app.get("/", (req, res) =>
 //GetData();
 
 /*
+=======
+//work
+app.get("/api/timovi", async (req, res) => 
+{
+    try{
+        const CelaBaza = await Sport.find();
+        res.json({
+            uspesno: true,
+            poruka: CelaBaza,
+        });
+
+    }catch(err){
+        res.json({
+            uspesno: false,
+            poruka: err.message 
+        });
+
+    }
+})
+/*async function ohno()
+{
+    console.log("ohno");
+}*/
+/*a
+>>>>>>> f60657301bb386b4a728b484fc520cb82e302f68
 async function GetData()
 {
     let eventovi=await axios.get("/api/eventovi"); //ovde ide ime petrove magicne datoteke za eventove (napravio sam da imne ime organizatora kontakt datum lokaciju i info)
