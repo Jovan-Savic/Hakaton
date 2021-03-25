@@ -47,9 +47,9 @@ const EventSchema = new mongoose.Schema(
         {
             type: [KorisnikSchema]
         },
-        slike:
+        slika:
         {
-            type: [String],
+            type: String
            // required: true
         },
 

@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const ConnectDatabase = require("./Database/Database");
 const Sport = require("./Database/Sport");
+const Korisnici = require("./Database/Korisnici");
 
 const PORT = 3000;
 
@@ -19,6 +20,23 @@ app.use(express.json());
 app.use(express.static("FrontEnd"));
 
 app.get("/api/eventi", async (req, res) => 
+{
+    try{
+        const CelaBaza = await Sport.find();
+        res.json({
+            uspesno: true,
+            poruka: CelaBaza,
+        });
+
+    }catch(err){
+        res.json({
+            uspesno: false,
+            poruka: err.message 
+        });
+
+    }
+})
+app.get("/api/korisnici", async (req, res) => 
 {
     try{
         const CelaBaza = await Sport.find();
@@ -59,7 +77,7 @@ app.post("/api/eventi", async (req, res) =>
 
     }
 })
-app.post("/api/korisnik", async (req, res) => 
+app.post("/api/korisnikuevent", async (req, res) => 
 {
     try{
         const IdEventa =  req.body.IdEventa;
@@ -67,10 +85,11 @@ app.post("/api/korisnik", async (req, res) =>
         const Event = await Sport.findById(IdEventa);
 
         const noviKorisnik = {
-            ime: req.body.ime,
+            idkorisnika: req.body.idkorisnika,
         }
 
         Event.ucesnici.push(noviKorisnik);
+
 
         const provera = await Event.save();
         res.json({
