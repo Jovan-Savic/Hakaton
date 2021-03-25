@@ -40,26 +40,26 @@ if(passre==pass)
 }
 else
 {
-    passreg.innerHTML="razliciti pasword";
+    passreg.innerHTML="razliciti pasword!";
 }
 }
 else
 {
-passg.innerHTML="password je prekratak";
+passg.innerHTML="password je prekratak!";
 }
 }
 else
 {
-    emelg.innerHTML="Los email";
+    emelg.innerHTML="Los email!";
 }
 } 
 else
 {
-preeg.innerHTML="Prezime je prekratko";
+preeg.innerHTML="Prezime je prekratko!";
 }
 }
 else
 {
-imeeg.innerHTML="Ime je prekratko";
+imeeg.innerHTML="Ime je prekratko!";
 }
 }
