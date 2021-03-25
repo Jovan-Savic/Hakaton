@@ -40,13 +40,13 @@ if(sifra.length>7)//proverava da li pasvord odgovara
 else
 {
 
-    ner.innerHTML="losa sifra";
+    ner.innerHTML="Losa sifra!";
 }
 }
 else
 {
    
-    gre.innerHTML="Greska sa imejlom";
+    gre.innerHTML="Greska sa emailom!";
 }
 }
 //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
