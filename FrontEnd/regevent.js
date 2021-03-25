@@ -22,8 +22,6 @@ if(imeev.length>2)
 {
     imegr.innerHTML="";
     console.log(lokev.length);
-if(lokev.length>4)
-{lokgr.innerHTML="";
 if(datu!=null && datu!='')
 { console.log("bbbbb");
     datugr.innerHTML="";
@@ -31,16 +29,11 @@ if(datu!=null && datu!='')
 }
 else
 {
-datugr.innerHTML="nemas datum";
+datugr.innerHTML="Nema datuma!";
 }
 }
 else
 {
-    lokgr.innerHTML="loikacija je prekratka";
-}
-}
-else
-{
-    imegr.innerHTML="ime je prekratko";
+    imegr.innerHTML="Ime je prekratko!";
 }
 }
