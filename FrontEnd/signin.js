@@ -39,7 +39,7 @@ if(passre==pass)
 {
     passreg.innerHTML="";
 
-   /* axios.post('/api/korisnici', 
+    axios.post('/api/korisnici', 
     {
         ime: imee,
         prezime: pree,
@@ -54,7 +54,7 @@ if(passre==pass)
       console.log(error);
     });
 //ubacuje se u bazu
-*/}
+}
 else
 {
     passreg.innerHTML="razliciti pasword!";
