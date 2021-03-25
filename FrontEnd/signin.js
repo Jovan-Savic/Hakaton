@@ -1,8 +1,6 @@
 const addButton = document.querySelector(".zivotjebol");
 addButton.addEventListener("click", GetInputa);
 
-
-
 async function GetInputa()
 {
 let imee=document.querySelector(".ime");
@@ -80,4 +78,21 @@ else
 {
 imeeg.innerHTML="Ime je prekratko!";
 }
+
+if(imee.length>2 && pree.length>2 && emel.indexOf('@')>-1 && pass.length>8 && passre==pass)
+{
+if(orga==false)
+{
+    var regeventa = document.getElementById('regeventa');
+    regeventa. style. display ='none';
+}
+ document.getElementById("logina").style.visibility="hidden";
+ 
+ var registera = document.getElementById('registera');
+ registera. style. display = 'none';
+ window.location.replace("Home.html");
+}
+
+
+
 }
