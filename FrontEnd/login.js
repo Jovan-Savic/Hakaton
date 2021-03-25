@@ -42,8 +42,9 @@ if(sifra.length>7)//proverava da li pasvord odgovara
 {
     ner.innerHTML="";
     console.log(korisnik.length);
-    korsnici.array.forEach(korsisnik => {
-        
+    korsnici.array.forEach((bol) => {
+        if(bol.mail==imil)
+        if(bol.password==sifra)k=1;
     });
     if(k==1){//logij se
         
