@@ -21,6 +21,8 @@ let passre=document.querySelector(".passr");
 passre=passre.value;
 let passreg=document.querySelector(".passrg");
 let orga=document.querySelector(".ckeck");
+orga=orga.value;
+console.log(orga);
 if(imee.length>2)
 {
     imeeg.innerHTML="";
@@ -37,7 +39,7 @@ if(passre==pass)
 {
     passreg.innerHTML="";
 
-    axios.post('/api/korisnici', 
+   /* axios.post('/api/korisnici', 
     {
         ime: imee,
         prezime: pree,
@@ -52,7 +54,7 @@ if(passre==pass)
       console.log(error);
     });
 //ubacuje se u bazu
-}
+*/}
 else
 {
     passreg.innerHTML="razliciti pasword!";
