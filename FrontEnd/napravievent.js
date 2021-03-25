@@ -8,5 +8,19 @@ function napravi()
 {
     const eventnap= document.querySelector(".event");
     let events="";
+
+    axios.post('/api/eventi', 
+    {
+        ime: ,
+        organizator: /*idorganizatora*/,
+        datum: /*tip promenjlljive date*/,
+        lokacija: ,
+        info: ,
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
     //eventi.forEach()
 }
