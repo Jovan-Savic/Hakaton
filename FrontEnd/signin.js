@@ -88,8 +88,7 @@ if(orga==false)
 }
  document.getElementById("logina").style.visibility="hidden";
  
- var registera = document.getElementById('registera');
- registera. style. display = 'none';
+ $("a.logina").show();
  window.location.replace("Home.html");
 }
 
