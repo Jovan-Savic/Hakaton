@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-
-
-
-=======
 //GetData();
->>>>>>> f60657301bb386b4a728b484fc520cb82e302f68
 const express = require("express");
 const app = express();
 const ConnectDatabase = require("./Database/Database");
@@ -30,7 +24,7 @@ app.get("/", (req, res) =>
         a: a,
     })
 })
-<<<<<<< HEAD
+
 //const ConnectDatabase = require("./Database/Database");
 
 //ConnectDatabase();

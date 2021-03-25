@@ -28,7 +28,8 @@ const KorisnikSchema = new mongoose.Schema(
         },
         organizator: 
         {
-            type: Boolean
+            type: Boolean,
+            required: true
         },
 
     });
@@ -43,23 +44,28 @@ const EventSchema = new mongoose.Schema(
         },
         organizator:
         {
-            type: KorisnikSchema
+            type: KorisnikSchema,
+            required: true
         },
         kontakt: 
         {
-            type: String
+            type: String,
+            required: true
         },
         datum: 
         {
-            type: Date
+            type: Date,
+            required: true
         },
         lokacija:
         {
-            type: String
+            type: String,
+            required: true
         },
         info:
         {
-            type: String
+            type: String,
+            required: true
         },
         ucesnici: 
         {
@@ -67,7 +73,8 @@ const EventSchema = new mongoose.Schema(
         },
         slike:
         {
-            type: [String]
+            type: [String],
+            required: true
         },
 
     });
