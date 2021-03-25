@@ -14,6 +14,10 @@ async function Registruj()
     let lokgr = document.querySelector(".lokgr");
     
     console.log("aaaaaaaaa");
+
+    let eventi = axios.get("/api/eventi"); // svi eventi
+    console.log(eventi); // ispis svih eventova u consoli
+
     let datu = document.querySelector(".datev")//petrov cao dokument
     datu =datu.value;
     let datugr = document.querySelector(".dategr");
