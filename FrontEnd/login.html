@@ -17,19 +17,20 @@
   <a href="signup.html" style="float: right;"> Sign up</a>
   <a href="registrujevent.html" style="float: right;">Registruj event</a>
 </header>
-
 <div class="signup">
   <h1>Ulogujte se</h1>
   <p>Unesite potrebne podatke kako biste se ulogovali.</p>
   <hr>
 
   <label for="email"><b>Email</b></label>
-  <input type="text" placeholder="Enter email" name="email" required>
+  <input type="text" class="emaill" placeholder="Enter email" name="email" required>
+  <div class="emailgreska"></div>
 
   <label for="psw"><b>Password</b></label>
-  <input type="password" placeholder="Enter Password" name="psw" required>
-
-  <button type="submit"class="signupbtn">Login</button>
+  <input type="password" class="passl" placeholder="Enter Password" name="psw" required>
+<div class="pasg"></div>
+   <button type="submit" class="add-button" >Login</button>
+ 
 </div>
 <footer class="footer" style="position: fixed;">
   <img src="twitter.png" height="30px" width="30px" style="margin: 10px;">
@@ -38,5 +39,7 @@
   <div style="float: right; margin-top: 30px;">
     ©Copyright 2021
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="login.js"></script>
     </body>
 </html>

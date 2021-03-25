@@ -1,8 +1,4 @@
-//const ConnectDatabase = require("./Database/Database");
 
-//ConnectDatabase();
-
-//GetData();
 
 
 const express = require("express");
@@ -25,7 +21,11 @@ app.get("/", (req, res) =>
         a: a,
     })
 })
+//const ConnectDatabase = require("./Database/Database");
 
+//ConnectDatabase();
+
+//GetData();
 
 /*
 async function GetData()
