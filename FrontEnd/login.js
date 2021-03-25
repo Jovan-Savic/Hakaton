@@ -46,7 +46,7 @@ if(sifra.length>7)//proverava da li pasvord odgovara
         
     });
     if(k==1){//logij se
-        
+        window.location.replace("Home.html");
     }
     else neema="neama tog korisnika";
 }

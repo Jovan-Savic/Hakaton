@@ -81,15 +81,8 @@ imeeg.innerHTML="Ime je prekratko!";
 
 if(imee.length>2 && pree.length>2 && emel.indexOf('@')>-1 && pass.length>8 && passre==pass)
 {
-if(orga==false)
-{
-    var regeventa = document.getElementById('regeventa');
-    regeventa. style. display ='none';
-}
- document.getElementById("logina").style.visibility="hidden";
- 
- $("a.logina").show();
- window.location.replace("Home.html");
+
+ window.location.replace("Home2.html");
 }
 
 
