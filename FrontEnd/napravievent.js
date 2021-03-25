@@ -8,18 +8,18 @@ function napravi(eventi)
 {
     const eventnap= document.querySelector(".event");
     let events="";
-    for(let i=0;i<eventi.length;i++)
+    eventi.forEach((eventa) =>
     {
-        eventi +=eventi+napravii(eventi);
-    }
+        eventi +=eventi+napravii(eventa);
+    });
 //eventi.forEach()
 }
-function napravii(eventi)
+function napravii(eventa)
 {
-    const eime=eventi.ime;
-    const elok=eventi.lokacija;
-    const datum=eventi.datum;
-    const info=eventi.info;
+    const eime=eventa.ime;
+    const elok=eventa.lokacija;
+    const datum=eventa.datum;
+    const info=eventa.info;
     let eve =`
     <img src="placeholder.png" style="float:left; width: auto; max-width: 400px; height:auto; max-height: 300px; border-radius: 5%; margin-right: 5px;">
     <h1 style="margin: 5px;">Dobrotvorna trka konja sabac 2021 | ${eime}</h1>
