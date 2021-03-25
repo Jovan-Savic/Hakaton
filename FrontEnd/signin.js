@@ -1,6 +1,8 @@
 const addButton = document.querySelector(".zivotjebol");
 addButton.addEventListener("click", GetInputa);
 
+
+
 async function GetInputa()
 {
 let imee=document.querySelector(".ime");
@@ -35,7 +37,20 @@ if(passre==pass)
 {
     passreg.innerHTML="";
 
-    
+    axios.post('/api/korisnici', 
+    {
+        ime: /*placeholder*/,
+        prezime: /*placeholder*/,
+        mail: /*placeholder*/,
+        password: /*placeholder*/,
+        organizator /*BOOL placeholder*/,
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 //ubacuje se u bazu
 }
 else
