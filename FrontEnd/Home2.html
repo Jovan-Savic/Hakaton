@@ -1,0 +1,91 @@
+<html>
+	<head>
+    <link rel="stylesheet" href="stil.css">
+    <link rel="shortcut icon" type="image/jpg" href="favikon.png"/>
+		<title>
+		Svet sporta | Home
+		</title>
+	</head>
+	
+	<body style= "margin:0px;">
+<header class="top">
+  <nav>
+  <a href="home2.html" class="activan">Home</a>
+  <a href="events2.html">Events</a>
+  <a href="galerija2.html">Galerija</a>
+  <a href="onama2.html">O nama</a>
+  <a id="regeventa" href="registrujevent.html" style="float: right;"></nav>
+</header>
+
+
+  
+  <div class="slajd" >
+  <div class="slikaslajda">
+    <img src="maraton.jpg" style="width:100%">
+    <div class="textsl" style="font-size: larger;">Ako volite trcanje...</div>
+  </div>
+
+  <div class="slikaslajda">
+    <img src="biciklizam.jpg" style="width:100%">
+    <div class="textsl" style="font-size: larger;">...ili biciklizam...</div>
+  </div>
+
+  <div class="slikaslajda">
+    <img src="plivanje.jpg" style="width:100%">
+    <div class="textsl" style="font-size: larger;">...a mozda i plivanje</div>
+  </div>
+ </div>
+  <br>
+  <div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  </div>
+  
+<section>
+<p style="font-size: larger; margin-top: 40px; margin-bottom: 40px; margin-left: 100px; margin-right: 100px;" >
+  Onda je ovo pravi sajt za vas. Nas sajt Svet sporta napravljen je 2021ve godine i od svog nastanka je najpoznatiji
+  sportski sajt u regionu. Bilo da ste sportista koji zeli da nadje pravi event na kom ce da ucestvuje ili
+  organizator koji zeli da reklamira svoj event na nasem sajtu cete naci ono sto trazite. Vise informacija o sajtu mozete 
+  naci <a style="color: #cf7500;" href="onama.html">ovde</a>.
+</p>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="signin.js"></script>
+<footer class="footer">
+<img src="twitter.png" height="30px" width="30px" style="margin: 10px;">
+<img src="facebook.jpg" height="30px" width="30px" style="margin: 10px;">
+<img src="instagram.jpg" height="30px" width="30px" style="margin: 10px;">
+<div style="float: right; margin-top: 30px;">
+  ©Copyright 2021
+</div>
+
+</div>
+</footer>
+
+
+
+
+<script>
+  var slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slikaslajda");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); 
+  }
+  </script>
+	</body>
+</html>
