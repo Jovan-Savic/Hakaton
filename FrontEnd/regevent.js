@@ -14,7 +14,10 @@ async function Registruj()
     let lokgr = document.querySelector(".lokgr");
     
     console.log("aaaaaaaaa");
-    let datu = document.querySelector(".datev")//petrov cao dokument
+
+    
+    let dodatno=document.querySelector("dateva");
+    let datu = document.querySelector(".datev");//petrov cao dokument
     datu =datu.value;
     let datugr = document.querySelector(".dategr");
     console.log(datu);
@@ -25,8 +28,24 @@ if(imeev.length>2)
 if(datu!=null && datu!='')
 { console.log("bbbbb");
     datugr.innerHTML="";
-    //mozes da uzmes
+   
+   
+    axios.post('/api/eventi', 
+    {
+        ime: imeev,
+        organizator: 2,
+        datum: datu,
+        lokacija: lokev,
+        info: dodatno,
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+})
 }
+
 else
 {
 datugr.innerHTML="Nema datuma!";
@@ -36,4 +55,6 @@ else
 {
     imegr.innerHTML="Ime je prekratko!";
 }
+
+
 }

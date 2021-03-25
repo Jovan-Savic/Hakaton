@@ -20,6 +20,7 @@ addButton.addEventListener("click", GetInput);
 
 async function GetInput()
 {
+    let k=0;
     let gre=document.querySelector(".emailgreska");
     console.log("aaaaaaaaa");
 let emil=document.querySelector(".emaill");
@@ -28,6 +29,11 @@ let sifra=document.querySelector(".passl");
 sifra=sifra.value;
 let ner=document.querySelector(".pasg")
 console.log(emil);
+let neema=document.querySelector(".nema");
+
+let korisnici = axios.get("/api/korisnici"); // svi korisnici
+console.log(korisnici); // ispis svih korisnika u consoli
+
 if(emil.length>7)//proveras da li emil postoji
 {
     gre.innerHTML="";
@@ -35,7 +41,15 @@ if(emil.length>7)//proveras da li emil postoji
 if(sifra.length>7)//proverava da li pasvord odgovara
 {
     ner.innerHTML="";
-    //loguje se
+    for(let i=0;i<korisnici.length;i++)
+    {
+        if(korisnici.meil==imel)
+        if(korisnici.password=sifra)k=1;
+    }
+    if(k==1){//logij se
+        
+    }
+    else neema="neama tog korisnika";
 }
 else
 {
