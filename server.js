@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-
-
-
-=======
-//GetData();
->>>>>>> f60657301bb386b4a728b484fc520cb82e302f68
 const express = require("express");
 const app = express();
 const ConnectDatabase = require("./Database/Database");
 const Sport = require("./Database/Sport");
+const Korisnici = require("./Database/Korisnici");
 
 const PORT = 3000;
 
@@ -22,25 +16,10 @@ ConnectDatabase();
 
 app.use(express.json());
 
-const a = 1;
 
-app.get("/", (req, res) => 
-{
-    res.json({
-        a: a,
-    })
-})
-<<<<<<< HEAD
-//const ConnectDatabase = require("./Database/Database");
+app.use(express.static("FrontEnd"));
 
-//ConnectDatabase();
-
-//GetData();
-
-/*
-=======
-//work
-app.get("/api/timovi", async (req, res) => 
+app.get("/api/eventi", async (req, res) => 
 {
     try{
         const CelaBaza = await Sport.find();
@@ -57,44 +36,72 @@ app.get("/api/timovi", async (req, res) =>
 
     }
 })
-/*async function ohno()
+app.get("/api/korisnici", async (req, res) => 
 {
-    console.log("ohno");
-}*/
-/*a
->>>>>>> f60657301bb386b4a728b484fc520cb82e302f68
-async function GetData()
-{
-    let eventovi=await axios.get("/api/eventovi"); //ovde ide ime petrove magicne datoteke za eventove (napravio sam da imne ime organizatora kontakt datum lokaciju i info)
-    Napravi(eventovi.data.eventovi);
-}
-function Napravi(eventovi)
-{
-    const eventdiv=document.querySelector(".event")
-    let events ="";
-    eventovi.forEach((eve) =>{
-    events=events+novieve();
+    try{
+        const CelaBaza = await Sport.find();
+        res.json({
+            uspesno: true,
+            poruka: CelaBaza,
+        });
+
+    }catch(err){
+        res.json({
+            uspesno: false,
+            poruka: err.message 
+        });
 
     }
-    );
-     eventdiv.innerHTML = events;
-}
- function novieve(eve)
- {
-     const Ime = eve.ime;
-     const Orga= eve.organizator;
-     const Broj=eve.number;
-     const date = eve.datum;
-     const lok = eve.lokacija;
-     const info=eve.info.toString();
-    let event=`
-    <div>tehnologije<div>
-    `;//ovde upisem dizajn koji stave
-    
+})
+app.post("/api/eventi", async (req, res) => 
+{
+    try{
+        const ime =  req.body.ime;
+         
 
-    
+        const noviEvent = new Sport({
+            ime: ime,
+        });
 
-     return event;
- }
+        const provera = await noviEvent.save();
+        res.json({
+            uspesno: true,
+            baza: provera,
+        });
 
-*/
+    }catch(err){
+        res.json({
+            uspesno: false,
+            poruka: err.message 
+        });
+
+    }
+})
+app.post("/api/korisnikuevent", async (req, res) => 
+{
+    try{
+        const IdEventa =  req.body.IdEventa;
+         
+        const Event = await Sport.findById(IdEventa);
+
+        const noviKorisnik = {
+            idkorisnika: req.body.idkorisnika,
+        }
+
+        Event.ucesnici.push(noviKorisnik);
+
+
+        const provera = await Event.save();
+        res.json({
+            uspesno: true,
+            baza: provera,
+        });
+
+    }catch(err){
+        res.json({
+            uspesno: false,
+            poruka: err.message 
+        });
+
+    }
+})
