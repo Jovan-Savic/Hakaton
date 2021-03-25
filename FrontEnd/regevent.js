@@ -15,8 +15,7 @@ async function Registruj()
     
     console.log("aaaaaaaaa");
 
-    let eventi = axios.get("/api/eventi"); // svi eventi
-    console.log(eventi); // ispis svih eventova u consoli
+    
 
     let datu = document.querySelector(".datev")//petrov cao dokument
     datu =datu.value;
@@ -40,4 +39,6 @@ else
 {
     imegr.innerHTML="Ime je prekratko!";
 }
+
+
 }
