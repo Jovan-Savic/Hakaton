@@ -47,11 +47,6 @@ const EventSchema = new mongoose.Schema(
         {
             type: [String],
         },
-        slika:
-        {
-            type: String
-           // required: true
-        },
 
     });
 
