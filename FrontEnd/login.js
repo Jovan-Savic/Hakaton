@@ -31,7 +31,7 @@ let ner=document.querySelector(".pasg")
 console.log(emil);
 let neema=document.querySelector(".nema");
 
-let korisnicii = axios.get("/api/korisnici"); // svi korisnici
+let korisnici = axios.get("/api/korisnici"); // svi korisnici
 console.log(korisnici); // ispis svih korisnika u consoli
 
 if(emil.length>7)//proveras da li emil postoji
@@ -41,15 +41,11 @@ if(emil.length>7)//proveras da li emil postoji
 if(sifra.length>7)//proverava da li pasvord odgovara
 {
     ner.innerHTML="";
-    korisnicii.array.forEach((korisnici) => {
-        if(emel==korisnici.meil)
-        {
-         if(sifra==korisnici.password)   
-         {
-             k=1;
-         }
-        }
-    });
+    for(let i=0;i<korisnici.length;i++)
+    {
+        if(korisnici.meil==imel)
+        if(korisnici.password=sifra)k=1;
+    }
     if(k==1){//logij se
         
     }
